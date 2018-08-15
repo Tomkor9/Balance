@@ -10,3 +10,9 @@ TEST_F(BalanceTest, feedOneUnbalancedBracket)
     Balance b;
     EXPECT_EQ(b.check("{"), false);
 }
+
+TEST_F(BalanceTest, feedTwoBalancedBrackets)
+{
+    Balance b;
+    EXPECT_EQ(b.check("{}"), true);
+}
