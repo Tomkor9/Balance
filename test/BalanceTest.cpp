@@ -1,18 +1,19 @@
 #include <gtest/gtest.h>
 #include "../inc/Balance.hpp"
 
-struct BalanceTest : public ::testing::Test
-{
-};
+struct BalanceTest : public ::testing::Test{};
 
-TEST_F(BalanceTest, feedOneUnbalancedBracket)
-{
+TEST_F(BalanceTest, feedOneUnbalancedBracket){
     Balance b;
     EXPECT_EQ(b.check("{"), false);
 }
 
-TEST_F(BalanceTest, feedTwoBalancedBrackets)
-{
+TEST_F(BalanceTest, feedTwoBalancedBrackets){
     Balance b;
     EXPECT_EQ(b.check("{}"), true);
+}
+
+TEST_F(BalanceTest, feedTwoBalancedBracketsDoubled){
+    Balance b;
+    EXPECT_EQ(b.check("{{}}"), true);
 }

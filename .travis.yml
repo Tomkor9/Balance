@@ -26,3 +26,5 @@ script:
   - cmake ..
   - make
   - ./Balance-ut
+notifications:
+  email: false
