@@ -25,4 +25,4 @@ script:
   - cd build
   - cmake ..
   - make
-- ./Balance-ut
+  - ./Balance-ut
