@@ -25,5 +25,10 @@ TEST_F(BalanceTest, feedTwoDifferentBalancedBrackets){
 
 TEST_F(BalanceTest, feedTwoDifferentUnbalancedBrackets){
     Balance b;
-    EXPECT_EQ(b.check("{})"),false);
+    EXPECT_EQ(b.check("{})"), false);
+}
+
+TEST_F(BalanceTest, feedTwoDifferentUnorderedBrackets){
+    Balance b;
+    EXPECT_EQ(b.check("{)(}"), false);
 }
