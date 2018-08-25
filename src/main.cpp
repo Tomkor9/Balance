@@ -4,11 +4,12 @@
 int main()
 {
     Balance input;
-    std::string balanced = "{}";
-    std::string unbalanced = "{)(}";
+    std::cout << input.check("{}{}") << ": {}{} should be 1\n";
+	std::cout << input.check("{()}") << ": {()} should be 1\n";
+	std::cout << input.check("{(})") << ": {(}) should be 0\n";
+	std::cout << input.check("{)(}") << ": {)(} should be 0\n";
+	std::cout << input.check("{})") << ": {}) should be 0\n";
 
-    std::cout << input.check(unbalanced);
-    std::cout << input.check(balanced);
     std::cin.get();
     return 0;
 }
